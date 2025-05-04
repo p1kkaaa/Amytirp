@@ -1,0 +1,89 @@
+.eucarde {
+  width: 500px;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eucarde__imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+.eucarde__slider {
+  display: flex;
+  height: 100%;
+}
+
+.eucarde__img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.eucarde__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.eucarde__imageWrapper:hover .eucarde__overlay {
+  opacity: 1;
+}
+
+.eucarde__overlayText {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.eucarde__button {
+  background-color: beige;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.eucarde__button:hover {
+  background-color: #e68900;
+}
+
+.eucarde__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eucarde__title {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+
+.eucarde__icon {
+  width: 24px;
+  height: 24px;
+}

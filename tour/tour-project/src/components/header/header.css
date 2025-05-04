@@ -86,3 +86,17 @@
   .header__search-btn:hover {
     background-color: rgb(191, 191, 111);
   }
+
+.header__login-btn {
+    background-color: rgb(241, 241, 145);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.header__login-btn:hover {
+  background-color: rgb(191, 191, 111);
+}

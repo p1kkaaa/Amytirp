@@ -1,0 +1,24 @@
+.tour {
+    padding-top: 20px;
+    padding-bottom: 43px;
+}
+
+.tour__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;  
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.tour__card {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    column-gap: 40px;
+}
+
+.tour__header h2 {
+  font-size: 2rem;
+}

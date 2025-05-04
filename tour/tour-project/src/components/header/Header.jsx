@@ -22,10 +22,13 @@ const Header = () => {
                     <div className="header__nav">
                         <ul>
                             <li><button>Топ-Туры</button></li>
-                            <li><button>Страны</button></li>
+                            <li><button>Тур по Европе</button></li>
                             <li><button>О нас</button></li>
                             <li><button>Контакты</button></li>
-                            <li><button></button></li>
+
+                            <div className="header__auth">
+                                <button className="header__login-btn">Войти</button>
+                            </div>
                         </ul>
                     </div>
                 </div>
