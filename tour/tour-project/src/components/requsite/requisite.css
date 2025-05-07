@@ -1,0 +1,47 @@
+.requisite {
+    padding-top: 20px;
+    padding-bottom: 43px;
+}
+
+.requi__header {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.requi__content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 100px;
+    gap: 100px;
+}
+
+
+.requi__block {
+    color: black;
+    padding-top: 20px;
+}
+
+.requi__block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.requi__block ul li {
+    display: flex;
+    align-items: center;
+    border-left: 3px solid black;
+    font-size: 18px;
+    margin: 10px 0;
+    padding-left: 12px;
+    gap: 18px;
+}
+
+.requi__header h2 {
+    font-size: 2rem;
+}
+

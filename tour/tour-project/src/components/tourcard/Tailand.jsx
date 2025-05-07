@@ -14,7 +14,7 @@ const Tailand = () => {
         <img className={styles.card__img} src={content} alt="Con" />
         <div className={styles.card__overlay}>
           <p className={styles.card__overlayText}>
-            Экскурсии
+            Побывать на саммых красивых островах Тайланда
           </p>
           <button onClick={handleClick} className={styles.card__button}>
             Еще...

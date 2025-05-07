@@ -14,7 +14,7 @@ const Bali = () => {
         <img className={styles.card__img} src={content} alt="Con" />
         <div className={styles.card__overlay}>
           <p className={styles.card__overlayText}>
-            Экскурсии
+            Тайны сердца Бали
           </p>
           <button onClick={handleClick} className={styles.card__button}>
             Еще...
