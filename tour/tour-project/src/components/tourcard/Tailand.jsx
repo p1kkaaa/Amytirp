@@ -1,11 +1,13 @@
 import styles from './Card.module.css';
 import content from './../../img/photo/tailand.jpg';
 import arrowimg from './../../img/icon/arrow.png'
+import { useNavigate } from 'react-router-dom';
 
 const Tailand = () => {
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    alert("Подробнее о туре");
+    navigate('./tour-tailand')
   };
 
   return (  

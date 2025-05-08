@@ -1,12 +1,14 @@
+import { useNavigate } from 'react-router-dom';
 import styles from './Card.module.css';
 import content from './../../img/photo/dubai.jpg';
 import arrowimg from './../../img/icon/arrow.png'
 
 
 const Dubai = () => {
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    alert("Подробнее о туре");
+    navigate('/tour-dubai'); // путь должен совпадать с тем, что указан в Routes
   };
 
   return (  

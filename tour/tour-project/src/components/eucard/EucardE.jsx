@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import styles from './EucardE.module.css';
 
@@ -18,6 +19,8 @@ const EucardE = () => {
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,7 +42,7 @@ const EucardE = () => {
   }, [index]);  
 
   const handleClick = () => {
-    alert("Подробнее о туре");
+    navigate("/easteu");
   };
 
   return (

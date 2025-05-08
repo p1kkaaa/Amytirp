@@ -5,8 +5,5 @@ import './styles/comon.css'
 import './styles/reset.css'
 
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

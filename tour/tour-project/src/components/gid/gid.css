@@ -1,48 +1,4 @@
-/* .gid {
-    text-align: center;
-    padding: 60px 0 55px;
-}
 
-.gid__header {
-    display: flex;
-    color: black;  
-    align-items: center;
-    justify-content: center; 
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.gid__list {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    column-gap: 440px;
-    margin-top: 40px;
-}
-
-.gid__list img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    object-fit: cover;
-}
-
-.gid__muted {
-    display: flex;
-    color: black;  
-    align-items: center;
-    justify-content: center; 
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 1.5rem;
-}
-
-.gid__header h2 {
-  font-size: 2rem;
-
-} */
 
 
 .gid {

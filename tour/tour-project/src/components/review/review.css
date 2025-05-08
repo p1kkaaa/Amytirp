@@ -1,0 +1,17 @@
+.review {
+    text-align: center;
+    padding: 60px 0 55px;
+}
+
+.review__header {
+    display: flex;
+    color: black;  
+    align-items: center;
+    justify-content: center; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.review__header h2 {
+    font-size: 2rem;
+}

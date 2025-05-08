@@ -1,30 +1,3 @@
-// import gid1 from './../../img/gid/zubarev.jpg'
-// import gid2 from './../../img/gid/derzko.jpg'
-// import gid3 from './../../img/gid/kudry.jpg'
-
-// import './gid.css'
-
-// const Gid = () => {
-//     return ( 
-//         <section className="gid">
-//             <div className="container">
-//                 <div className="gid__header">
-//                     <div className="title-2">
-//                         <h2>Наши Супер-Гиды</h2>
-//                     </div>
-//                 </div>
-//                 <div className="gid__list">
-//                     <li><a href="#!"><img src={ gid1 } alt="" /></a></li>
-//                     <li><a href="#!"><img src={ gid2 } alt="" /></a></li>
-//                     <li><a href="#!"><img src={ gid3 } alt="" /></a></li>
-//                 </div>  
-//             </div>
-//         </section>
-//      );
-// }
- 
-// export default Gid;
-
 import gid1 from './../../img/gid/zubarev.jpg'
 import gid2 from './../../img/gid/derzko.jpg'
 import gid3 from './../../img/gid/kudry.jpg'

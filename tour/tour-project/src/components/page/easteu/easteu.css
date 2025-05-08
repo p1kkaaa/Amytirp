@@ -1,0 +1,17 @@
+.easteurope {
+    padding-top: 20px;
+    padding-bottom: 43px;
+}
+
+.easteu__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;  
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.easteu__header h2 {
+  font-size: 2rem;
+}
