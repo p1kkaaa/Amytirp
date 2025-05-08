@@ -31,8 +31,8 @@ function MainPage() {
       <Gid />
       <Europe />
       <About />
-      <Requisite />
       <Review />
+      <Requisite />
       <Footer />
 
     </>

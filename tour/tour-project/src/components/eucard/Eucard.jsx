@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Eucard.module.css';
-
 import arrowimg from './../../img/icon/arrow.png';
 import Aus from './../../img/photo/Austria.jpg';
 import Belg from './../../img/photo/Belgium.jpg';
@@ -14,6 +14,7 @@ const images = [Aus, Belg, Neth, Lux, Ger, Irl, Uk];
 const extendedImages = [...images, images[0]]; // добавляем клон первого в конец
 
 const Eucard = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
@@ -38,7 +39,7 @@ const Eucard = () => {
   }, [index]);
 
   const handleClick = () => {
-    alert("Подробнее о туре");
+    navigate('/westeu'); // путь должен совпадать с тем, что указан в Routes
   };
 
   return (

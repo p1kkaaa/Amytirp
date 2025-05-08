@@ -27,7 +27,7 @@ const Gid = () => {
         alert("Подробнее о туре");
       };
     return ( 
-        <section className="gid">
+        <section id='gid' className="gid">
             <div className="container">
                 <div className="gid__header">
                     <div className="title-2">

@@ -2,7 +2,7 @@ import './review.css'
 
 const Review = () => {
     return ( 
-        <section className="review">
+        <section id='review' className="review">
             <div className="containe">
                 <div className="review__header">
                     <h2>Отзовы</h2>

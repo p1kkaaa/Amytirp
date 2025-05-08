@@ -31,14 +31,15 @@
   .header__logo {
     display: flex;
     align-items: center;
-    column-gap: 13px;
+    column-gap: 20px;
   }
   
   .header__logo img {
     width: 40px;
     height: 40px;
     object-fit: cover;
-  }
+    border-radius: 50%;
+  }  
   
   .header__logo span {
     text-transform: uppercase;

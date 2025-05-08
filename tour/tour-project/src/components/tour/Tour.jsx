@@ -5,7 +5,7 @@ import './tour.css'
 
 const Tour = () => {
     return ( 
-   <section id='tour' className='tour'>
+   <section id='top-tours' className='tour'>
     <div className="container">
       <div className="tour__header">
 

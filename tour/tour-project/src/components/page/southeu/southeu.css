@@ -1,0 +1,107 @@
+.tourbali {
+    padding-top: 20px;
+    padding-bottom: 43px;
+  }
+  
+  .tourbali__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
+  
+  .tourbali__header h2 {
+    font-size: 2rem;
+  }
+  
+  .tourcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .tourcontent > div {
+    flex: 0 1 48%;
+  }
+  
+  .txttour h2 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .tour-sche {
+    display: flex;
+    justify-content: space-between; /* элементы по краям */
+    align-items: flex-start;
+    gap: 40px; /* свободно регулируй */
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .tour-schedule {
+    padding: 30px;
+    background-color: rgb(210, 210, 150);
+    border-radius: 16px;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 700px; /* Ограничение ширины */
+  }
+  
+  .tour-schedule__title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .tour-schedule__list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+  
+  .tour-schedule__list li {
+    background-color: beige;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border-left: 4px solid rgb(211, 211, 172);
+    transition: background 0.3s;
+  }
+  
+  .tour-gid {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto; /* <-- Прижимает к правому краю */
+    margin-right: 80px;    /* <-- Убедись, что справа нет дополнительного смещения */
+  }
+  
+  .tour-gid img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  .tour-gid__desc {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #444;
+    max-width: 220px;
+  }
+  
+  
+  
+  
+  
+  
+
+  
+  

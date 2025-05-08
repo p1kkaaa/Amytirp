@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './EucardS.module.css';
 
 import arrowimg from './../../img/icon/arrow.png';
@@ -14,6 +15,7 @@ const images = [Gree, Spa, Ita, Port, Fin, Swe, Cro];
 const extendedImages = [...images, images[0]]; // добавляем клон первого в конец
 
 const EucardS = () => {
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
@@ -38,7 +40,7 @@ const EucardS = () => {
   }, [index]);
 
   const handleClick = () => {
-    alert("Подробнее о туре");
+    navigate('/southeu'); // путь должен совпадать с тем, что указан в Routes
   };
 
   return (

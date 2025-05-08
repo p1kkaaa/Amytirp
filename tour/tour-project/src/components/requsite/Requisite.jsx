@@ -3,7 +3,7 @@ import inst from './../../img/icon/instagram.png'
 
 const Requisite = () => {
     return ( 
-        <section className="requsite">
+        <section id='contacts' className="requsite">
         <div className="container">
             <div className="requi__header">
                 <h2 className="title-2">Контакты</h2>
