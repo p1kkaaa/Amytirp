@@ -1,8 +1,14 @@
 import './header.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from './../../img/logo/sun_trip.jpg';
 
 const Header = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/loginregistr'); // путь должен совпадать с тем, что указан в Routes
+      };
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -40,7 +46,7 @@ const Header = () => {
                             <li><button onClick={() => scrollToSection('contacts')}>Контакты</button></li>
 
                             <div className="header__auth">
-                                <button className="header__login-btn">Войти</button>
+                                <button onClick={handleClick} className="header__login-btn">Войти</button>
                             </div>
                         </ul>
                     </div>

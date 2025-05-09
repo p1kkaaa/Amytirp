@@ -16,6 +16,7 @@ import Westeu from "./components/page/westeu/Westeu";
 import Southeu from "./components/page/southeu/Southeu";
 import Tourtailand from "./components/page/tour-tailand/Tour-tailand";
 import Tourdubai from "./components/page/tour-dubai/Tour-dubai";
+import LoginRegistr from "./components/page/login-registr/LoginRegistr";
 
 
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/tour-bali" element={<Tourbali /> } />
           <Route path="/tour-tailand" element={<Tourtailand /> } />
           <Route path="/tour-dubai" element={<Tourdubai /> } />
+          <Route path="/loginregistr" element={<LoginRegistr /> } />
         </Routes>
       </Router>
     </div>

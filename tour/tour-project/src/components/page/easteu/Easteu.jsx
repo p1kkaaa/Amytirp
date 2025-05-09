@@ -1,7 +1,7 @@
 import Parallax from '../../parallax/Parallax';
 import Footer from '../../footer/Footer';
 import Bali from '../tourcard/Balicard';
-import gid from './../../../img/gid/gid2.jpg'
+import gid from './../../../img/gid/mark.jpg'
 import './easteu.css'
 
 const Easteu = () => {
