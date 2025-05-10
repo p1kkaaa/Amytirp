@@ -13,9 +13,11 @@ const Requisite = () => {
                 <div className="requi__block">
                         <h3>Телефон:</h3>
                     <ul>
-                        <li><span>📞</span>+996 700 600 645</li>
-                        <li><span>📞</span>+996 508 598 887</li>
-                        <li><span>📞</span>+996 771 777 787</li>
+                        <li><span>📞</span>+996 700 600 500</li>
+
+                        <li><span>📞</span>+996 700 600 500</li>
+
+                        <li><span>📞</span>+996 700 600 500</li>
                     </ul>
                 </div>
                 <div className="requi__block">
