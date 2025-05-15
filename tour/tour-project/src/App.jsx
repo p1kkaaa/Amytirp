@@ -26,6 +26,7 @@ import LoginRegistr from "./components/page/login-registr/LoginRegistr";
 function MainPage() {
   return (
     <>
+    
       <Header />
       <Parallax />
       <Tour />

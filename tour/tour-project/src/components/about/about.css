@@ -19,9 +19,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: rgb(0, 0, 0);
+    background-color: rgb(211, 211, 172);
     font-size: 18px;
     line-height: 1.7;
+    border-radius: 34px;
 }
 
 .about__content p {
