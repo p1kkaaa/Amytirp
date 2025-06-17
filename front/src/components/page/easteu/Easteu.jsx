@@ -3,8 +3,14 @@ import Footer from '../../footer/Footer';
 import Bali from '../tourcard/Balicard';
 import gid from './../../../img/gid/mark.jpg'
 import './easteu.css'
+import { useNavigate } from 'react-router-dom';
 
 const Easteu = () => {
+    const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    }
     return ( 
         <>
         <Parallax />
@@ -59,6 +65,9 @@ const Easteu = () => {
                             <p>
                                 Я буду сопровождать вас на протяжении всего маршрута — от Праги до Софии. Вместе мы исследуем города с многовековой историей, почувствуем величие северной природы и проникнемся культурой Восточной Европы. Я покажу вам не только туристические места, но и настоящую жизнь в этих странах.
                             </p>
+                        </div>
+                        <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
                         </div>
                     </div>
 

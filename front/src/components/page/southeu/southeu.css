@@ -97,11 +97,21 @@
     max-width: 220px;
   }
   
-  
-  
-  
-  
-  
+    .booking-btn {
+    font-size: 2rem;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color: rgb(241, 241, 145);
+    padding: 8px 16px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
 
-  
+  .booking-btn:hover {
+  background-color: rgb(191, 191, 111);
+  }
   

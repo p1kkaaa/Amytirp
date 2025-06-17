@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import About from "./components/about/About";
 import Europe from "./components/europetour/Europe";
@@ -19,6 +19,7 @@ import Tourdubai from "./components/page/tour-dubai/Tour-dubai";
 import LoginRegistr from "./components/page/login-registr/LoginRegistr";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
+import Booking from "./components/page/booking/Booking";
 
 
 function MainPage() {
@@ -41,44 +42,45 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/easteu" element={<Easteu />} />
-            <Route path="/southeu" element={<Southeu />} />
-            <Route path="/westeu" element={<Westeu />} />
-            <Route path="/gidpage" element={<Gidpage />} />
+        {/* ❌ Удалён <Router> — он уже есть в main.jsx */}
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/easteu" element={<Easteu />} />
+          <Route path="/southeu" element={<Southeu />} />
+          <Route path="/westeu" element={<Westeu />} />
+          <Route path="/gidpage" element={<Gidpage />} />
+          <Route path="/booking" element={<Booking />} />
 
-            {/* Защищённые маршруты */}
-            <Route
-              path="/tour-bali"
-              element={
-                <PrivateRoute>
-                  <Tourbali />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/tour-tailand"
-              element={
-                <PrivateRoute>
-                  <Tourtailand />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/tour-dubai"
-              element={
-                <PrivateRoute>
-                  <Tourdubai />
-                </PrivateRoute>
-              }
-            />
+          {/* Защищённые маршруты */}
+          <Route
+            path="/tour-bali"
+            element={
+              <PrivateRoute>
+                <Tourbali />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/tour-tailand"
+            element={
+              <PrivateRoute>
+                <Tourtailand />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/tour-dubai"
+            element={
+              <PrivateRoute>
+                <Tourdubai />
+              </PrivateRoute>
+            }
+          />
 
-            {/* Публичный маршрут */}
-            <Route path="/loginregistr" element={<LoginRegistr />} />
-          </Routes>
-        </Router>
+          {/* Публичный маршрут */}
+          <Route path="/loginregistr" element={<LoginRegistr />} />
+        </Routes>
       </AuthProvider>
     </div>
   );

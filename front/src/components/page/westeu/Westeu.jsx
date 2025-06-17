@@ -3,8 +3,14 @@ import Footer from './../../footer/Footer'
 import Bali from './../tourcard/Balicard'
 import gid from './../../../img/gid/adelya.jpg'
 import './westeu.css'
+import { useNavigate } from 'react-router-dom'
 
 const Westeu = () => {
+    const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    }
     return ( 
         <>
         <Parallax />
@@ -59,6 +65,9 @@ const Westeu = () => {
                             <p>
                                 Я буду сопровождать вас с самого начала — встречу группу в Вене и проведу через все семь стран тура. Вместе мы увидим сердце Европы, от исторических столиц до живописных деревушек. Я расскажу вам интересные факты, покажу скрытые уголки и помогу прочувствовать атмосферу каждого места.
                             </p>
+                        </div>
+                        <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
                         </div>
                     </div>
 

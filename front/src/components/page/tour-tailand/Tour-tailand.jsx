@@ -3,8 +3,14 @@ import Parallax from '../../parallax/Parallax';
 import Bali from '../tourcard/Balicard';
 import './tour-tailand.css'
 import Footer from '../../footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Tourtailand = () => {
+    const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    }
     return ( 
         <>
             <Parallax />
@@ -58,6 +64,9 @@ const Tourtailand = () => {
                                     Я буду сопровождать вас с первого дня — встречу группу в Бангкоке и проведу через все этапы путешествия. Благодаря моему опыту, вы сможете открыть для себя как древнюю культуру Таиланда, так и современные туристические направления. Я помогу вам проникнуться атмосферой города, а также насладиться природными красотами и безмятежными пляжами.
                                 </p>
                             </div>
+                            <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
+                        </div>
                         </div>
 
                     </div>

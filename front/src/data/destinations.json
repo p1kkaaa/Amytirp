@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Bali",
+    "description": "City of Light",
+    "image": "/img/photo/bali.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tailand",
+    "description": "Tradition meets tech",
+    "image": "/img/photo/tailand.jpg"
+  },
+   {
+    "id": 3,
+    "name": "Dubai",
+    "description": "Tradition meets tech",
+    "image": "/img/photo/dubai.jpg"
+  }
+  ,
+   {
+    "id": 4,
+    "name": "Southern Europe",
+    "description": "Tradition meets tech",
+    "image": "/img/photo/bali.jpg"
+  },
+   {
+    "id": 5,
+    "name": "Eastern Europe",
+    "description": "Tradition meets tech",
+    "image": "/assets/tokyo.jpg"
+  },
+   {
+    "id": 6,
+    "name": "Western Europe",
+    "description": "Tradition meets tech",
+    "image": "/assets/tokyo.jpg"
+  }
+]

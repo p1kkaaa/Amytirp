@@ -3,8 +3,14 @@ import gid from './../../../img/gid/kudry.jpg'
 import Parallax from '../../parallax/Parallax';
 import Footer from '../../footer/Footer';
 import Bali from '../tourcard/Balicard';
+import { useNavigate } from 'react-router-dom';
 
 const Tourdubai = () => {
+    const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    }
     return (
         <>
             <Parallax />
@@ -60,6 +66,9 @@ const Tourdubai = () => {
                                     Я буду сопровождать вас с первого дня — встречу группу в отеле и проведу через все этапы путешествия. Благодаря моему опыту, вы сможете открыть для себя как ультрасовременный, так и традиционный Дубай, погрузиться в атмосферу пустыни, исследовать старинные рынки и насладиться роскошью современных объектов. Мой опыт и знания сделают ваше путешествие незабываемым.
                                 </p>
                             </div>
+                            <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
+                        </div>
                         </div>
 
                     </div>

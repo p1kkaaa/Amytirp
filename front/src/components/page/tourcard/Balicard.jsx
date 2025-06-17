@@ -12,7 +12,7 @@ const Bali = () => {
       </div>
       <div className={styles.card__body}>
         <div className={styles.card__text}>
-          <div className={styles.card__title}>Тайны сердца Бали</div>
+          {/* <div className={styles.card__title}>Тайны сердца Бали</div> */}
         </div>
       </div>
     </div>

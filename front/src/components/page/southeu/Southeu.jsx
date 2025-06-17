@@ -3,8 +3,15 @@ import Footer from "../../footer/Footer";
 import Bali from "../tourcard/Balicard";
 import gid from './../../../img/gid/nargiza.jpg';
 import './southeu.css'
+import { useNavigate } from "react-router-dom";
+
 
 const Southeu = () => {
+   const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    };
     return ( 
         <>
         <Parallax />
@@ -57,6 +64,9 @@ const Southeu = () => {
                             <p>
                                 Я буду с вами от первого до последнего дня — проведу через разноцветные улицы Барселоны, атмосферу итальянского Ренессанса, чарующие хорватские пейзажи и северное спокойствие Скандинавии. Расскажу, где по-настоящему чувствуется дух Европы, и покажу места, которые не найти в стандартных путеводителях.
                             </p>
+                        </div>
+                        <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
                         </div>
                     </div>
 

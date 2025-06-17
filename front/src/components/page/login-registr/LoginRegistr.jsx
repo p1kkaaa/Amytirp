@@ -3,12 +3,12 @@ import './LoginRegistr.css';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
 import { useAuth } from '../../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import Header from '../../header/Header';
 
 const LoginRegistr = () => {
     const [action, setAction] = useState('');
     const [loginData, setLoginData] = useState({
         username: '',
-        email: '',
         password: ''
     });
 
@@ -23,15 +23,16 @@ const LoginRegistr = () => {
     const { login, register } = useAuth();
     const navigate = useNavigate();
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            await login(loginData.username, loginData.password, loginData.email);
-            navigate('/'); // редирект на главную после входа
-        } catch (error) {
-            alert('Ошибка входа: ' + (error?.response?.data?.detail || error.message));
-        }
-    };
+const handleLogin = async (e) => {
+  e.preventDefault();
+  try {
+    await login(loginData.email, loginData.password); // email вместо username
+    navigate('/');
+  } catch (error) {
+    alert('Ошибка входа: ' + (error?.response?.data?.detail || error.message));
+  }
+};
+
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -44,13 +45,15 @@ const LoginRegistr = () => {
     };
 
     return (
+        <>
+        <Header />
         <div className="bodys">
             <div className={`wrapper${action}`}>
                 {/* Login form */}
                 <div className="form-box login">
                     <form onSubmit={handleLogin}>
                         <h1>Login</h1>
-                        <div className="input-box">
+                        {/* <div className="input-box">
                             <input
                                 type="text"
                                 placeholder="Username"
@@ -61,7 +64,7 @@ const LoginRegistr = () => {
                                 }
                             />
                             <FaUser className="icon" />
-                        </div>
+                        </div> */}
 
                         <div className="input-box">
                             <input
@@ -137,7 +140,7 @@ const LoginRegistr = () => {
                             />
                         </div>
 
-                        <div className="input-box">
+                        {/* <div className="input-box">
                             <input
                                 type="text"
                                 placeholder="Username"
@@ -148,7 +151,7 @@ const LoginRegistr = () => {
                                 }
                             />
                             <FaUser className="icon" />
-                        </div>
+                        </div> */}
 
                         <div className="input-box">
                             <input
@@ -194,6 +197,7 @@ const LoginRegistr = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

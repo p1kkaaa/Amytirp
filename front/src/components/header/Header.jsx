@@ -16,6 +16,10 @@ const Header = () => {
         navigate('/');
     };
 
+    const handClick = () => {
+        navigate('/booking');
+    };
+
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -51,6 +55,7 @@ const Header = () => {
                             <li><button onClick={() => scrollToSection('about')}>О нас</button></li>
                             <li><button onClick={() => scrollToSection('review')}>Отзывы</button></li>
                             <li><button onClick={() => scrollToSection('contacts')}>Контакты</button></li>
+                            <li><button onClick={handClick}>Бронирование</button></li>
 
                             <div className="header__auth">
                                 {user ? (

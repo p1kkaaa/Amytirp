@@ -1,73 +1,80 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import api from '../services/axiosConfig';
+import api from '../services/axiosConfig'; // axios с baseURL и JWT-token support
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        const loadUser = async () => {
-            const token = localStorage.getItem('access_token');
-            if (token) {
-                try {
-                    const response = await api.get('users/me/');
-                    setUser(response.data);
-                } catch (error) {
-                    logout();
-                }
-            }
-            setIsLoading(false);
-        };
-
-        loadUser();
-    }, []);
-
-const login = async (username, password, email) => {
-  try {
-    const response = await api.post('auth/login/', {
-      username,
-      password,
-      email
-    });
-    localStorage.setItem('access_token', response.data.access);
-    localStorage.setItem('refresh_token', response.data.refresh);
-    setUser(response.data.user);
-    return response.data;
-  } catch (error) {
-    console.log('📦 Логин отправлен:', { username, password, email });
-    console.log('❌ Ответ сервера при логине:', JSON.stringify(error.response?.data, null, 2));
-    throw error;
-  }
-};
-
-
-
-
-    const register = async (userData) => {
-        try {
-            await api.post('auth/register/', userData);
-        } catch (error) {
-            console.log('📦 Отправленные данные:', userData);
-            console.log('❌ Ответ сервера:', JSON.stringify(error.response?.data, null, 2));
-            throw error;
-        }
+  // Загружаем пользователя из localStorage при старте
+  useEffect(() => {
+    const loadUser = () => {
+      const userStr = localStorage.getItem('user');
+      if (userStr) {
+        setUser(JSON.parse(userStr));
+      }
+      setIsLoading(false);
     };
 
+    loadUser();
+  }, []);
 
+  const login = async (email, password) => {
+    try {
+      const response = await api.post('auth/login/', {
+        email,
+        password,
+      });
 
-    const logout = () => {
-        localStorage.removeItem('access_token');
-        localStorage.removeItem('refresh_token');
-        setUser(null);
-    };
+      const { access, refresh, user: userFromLogin } = response.data;
 
-    return (
-        <AuthContext.Provider value={{ user, isLoading, login, register, logout }}>
-            {children}
-        </AuthContext.Provider>
-    );
+      localStorage.setItem('access_token', access);
+      localStorage.setItem('refresh_token', refresh);
+      localStorage.setItem('user', JSON.stringify(userFromLogin));
+
+      setUser(userFromLogin);
+
+      return response.data;
+    } catch (error) {
+      console.log('❌ Ошибка при логине:', error.response?.data || error.message);
+      throw error;
+    }
+  };
+
+  const register = async (userData) => {
+    try {
+      await api.post('auth/register/', userData);
+    } catch (error) {
+      console.log('📦 Отправленные данные:', userData);
+      console.log('❌ Ответ сервера:', JSON.stringify(error.response?.data, null, 2));
+      throw error;
+    }
+  };
+
+  const logout = () => {
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+    localStorage.removeItem('user');
+    setUser(null);
+  };
+
+  const isAuthenticated = !!user;
+
+  return (
+    <AuthContext.Provider
+      value={{
+        user,
+        isAuthenticated,
+        isLoading,
+        login,
+        register,
+        logout,
+      }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const useAuth = () => useContext(AuthContext);

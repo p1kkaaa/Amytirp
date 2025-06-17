@@ -3,9 +3,15 @@ import Parallax from './../../parallax/Parallax'
 import Footer from './../../footer/Footer'
 import Bali from '../tourcard/Balicard';
 import gid from './../../../img/gid/zubarev.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
 const Tourbali = () => {
+    const navigate = useNavigate(); // ✅ теперь это правильно
+
+    const handleClick = () => {
+        navigate('/booking'); // работает
+    }
     return (
         <>
             <Parallax />
@@ -61,6 +67,9 @@ const Tourbali = () => {
                                     Я буду сопровождать вас с первого дня — встречу группу в отеле и проведу через все этапы путешествия. Благодаря моему опыту, вы сможете открыть для себя красоты балийских пляжей, погрузиться в атмосферу местной культуры и почувствовать настоящий дух острова.
                                 </p>
                             </div>
+                            <div className="booking-btn">
+                            <button onClick={handleClick}>Забронировать</button>
+                        </div>
                         </div>
 
                     </div>
