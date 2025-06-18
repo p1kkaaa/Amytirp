@@ -1,0 +1,23 @@
+.bookining {
+    text-align: center;
+    padding: 60px 0 55px;
+}
+
+.book-link {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(241, 241, 145);
+    font-size: 2rem;
+    line-height: 1.7;
+    border-radius: 34px;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.book-link:hover {
+    background-color: rgb(211, 211, 172);
+}

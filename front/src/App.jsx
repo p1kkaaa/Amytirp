@@ -20,6 +20,7 @@ import LoginRegistr from "./components/page/login-registr/LoginRegistr";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import Booking from "./components/page/booking/Booking";
+import Bookining from "./components/bookining/Bookining";
 
 
 function MainPage() {
@@ -31,6 +32,7 @@ function MainPage() {
       <Gid />
       <Europe />
       <About />
+      <Bookining />
       <Review />
       <Requisite />
       <Footer />
