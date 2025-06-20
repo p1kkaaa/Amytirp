@@ -53,18 +53,7 @@ const handleLogin = async (e) => {
                 <div className="form-box login">
                     <form onSubmit={handleLogin}>
                         <h1>Login</h1>
-                        {/* <div className="input-box">
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                required
-                                value={loginData.username}
-                                onChange={(e) =>
-                                    setLoginData({ ...loginData, username: e.target.value })
-                                }
-                            />
-                            <FaUser className="icon" />
-                        </div> */}
+                        
 
                         <div className="input-box">
                             <input
@@ -140,18 +129,7 @@ const handleLogin = async (e) => {
                             />
                         </div>
 
-                        {/* <div className="input-box">
-                            <input
-                                type="text"
-                                placeholder="Username"
-                                required
-                                value={registerData.username}
-                                onChange={(e) =>
-                                    setRegisterData({ ...registerData, username: e.target.value })
-                                }
-                            />
-                            <FaUser className="icon" />
-                        </div> */}
+                       
 
                         <div className="input-box">
                             <input
